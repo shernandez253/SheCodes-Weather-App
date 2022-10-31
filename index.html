@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/f66e86e656.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app border border-primary">
+        <h1>Most Accurate Weather Forecast</h1>
+
+        <form class="location-search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Enter location"
+                autofocus="on"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                class="form-control btn btn-primary"
+                type="submit"
+                value="Search"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                class="current-button btn btn-secondary"
+                type="submit"
+                value="Current"
+              />
+            </div>
+          </div>
+        </form>
+
+        <h2 id="city"></h2>
+        <div id="current-time-date"></div>
+        <ul class="temperature-list">
+          <li><i class="fa-solid fa-sun current-sun-icon"></i></li>
+          <li class="high-temperature current-temperature">
+            <span id="high-temperature"></span> High
+            <a href="#" class="farenheit-celcius">
+              <span id="farenheit">°F</span> |
+              <span id="celsius">°C</span>
+            </a>
+          </li>
+          <li class="low-temperature current-temperature">
+            <span id="low-temperature">83°</span> Low
+          </li>
+        </ul>
+
+        <hr />
+        <h3>5 Day Forecast</h3>
+        <div class="row">
+          <div class="col-2">
+            <div class="card" style="width: 10rem">
+              <div class="card-body">
+                <h5 class="card-title">Thurs 9/22</h5>
+                <ul class="temperature-list">
+                  <li>
+                    <i class="fa-solid fa-cloud-sun-rain weather-icon"></i>
+                  </li>
+                  <li class="high-temperature">85° High</li>
+                  <li class="low-temperature">80° Low</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-2">
+            <div class="card" style="width: 10rem">
+              <div class="card-body">
+                <h5 class="card-title">Fri 9/23</h5>
+                <ul class="temperature-list">
+                  <li><i class="fa-solid fa-cloud-sun weather-icon"></i></li>
+                  <li class="high-temperature">92° High</li>
+                  <li class="low-temperature">86° Low</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-2">
+            <div class="card" style="width: 10rem">
+              <div class="card-body">
+                <h5 class="card-title">Sat 9/24</h5>
+                <ul class="temperature-list">
+                  <li>
+                    <i class="fa-solid fa-cloud-bolt weather-icon"></i>
+                  </li>
+                  <li class="high-temperature">91° High</li>
+                  <li class="low-temperature">82° Low</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-2">
+            <div class="card" style="width: 10rem">
+              <div class="card-body">
+                <h5 class="card-title">Sun 9/25</h5>
+                <ul class="temperature-list">
+                  <li><i class="fa-solid fa-cloud weather-icon"></i></li>
+                  <li class="high-temperature">81° High</li>
+                  <li class="low-temperature">78° Low</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-2">
+            <div class="card" style="width: 10rem">
+              <div class="card-body">
+                <h5 class="card-title">Mon 9/26</h5>
+                <ul class="temperature-list">
+                  <li><i class="fa-solid fa-sun weather-icon"></i></li>
+                  <li class="high-temperature">95° High</li>
+                  <li class="low-temperature">87° Low</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
